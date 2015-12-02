@@ -28,7 +28,7 @@ def main():
     global noise
     rospy.init_node("measurement_server", log_level=rospy.INFO)
     br = tf.TransformBroadcaster()
-    noise = rospy.get_param("~noise", NOISE)
+    noise = rospy.get_param("~meas_noise", NOISE)
     rospy.Subscriber("pose", Pose, posecb, callback_args=br)
     meas_server = rospy.Service("measurement", WallMeasurement, measurement_servicecb)
     rospy.spin()
