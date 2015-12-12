@@ -7,7 +7,6 @@ find_package(catkin REQUIRED COMPONENTS
   geometry_msgs
   tf
   turtlesim
-  teleop_twist_joy
   message_generation
   )
 
